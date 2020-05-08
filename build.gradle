@@ -2,6 +2,7 @@ repositories {
     mavenCentral()
 }
 buildscript {
+
     repositories {
         mavenCentral()
     }
@@ -9,12 +10,16 @@ buildscript {
         classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
     }
 }
+
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'net.serenity-bdd.aggregator'
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
+
+
 dependencies {
     testCompile 'net.serenity-bdd:serenity-core:1.1.1'
     testCompile 'net.serenity-bdd:serenity-junit:1.1.1'
@@ -27,4 +32,6 @@ dependencies {
     compile 'net.serenity-bdd:serenity-screenplay:1.9.9'
     compile 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
 }
+
+
 gradle.startParameter.continueOnFailure = true
